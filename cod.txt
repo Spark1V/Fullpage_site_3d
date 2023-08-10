@@ -1,0 +1,523 @@
+html
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Fullpage 3d site</title>
+	<link rel="stylesheet" href="/CSS/main.css">
+</head>
+
+<body>
+
+	<div class="container">
+
+
+		<nav class="navbar">
+			<div class="menu">
+				<h3 class="logo">Company<span>name</span></h3>
+				<div class="burger">
+					<div class="bar"></div>
+				</div>
+			</div>
+		</nav>
+
+
+
+
+		<div class="screen" id="Home">
+			<div class="main">
+				<header class="header_one">
+					<div class="header">
+						<div class="header_item">
+							<h2 class="title">Home page</h2>
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, perferendis adipisci
+								cumque natus expedita nihil!</p>
+							<button class="btn">Read more</button>
+						</div>
+					</div>
+				</header>
+			</div>
+
+			<div class="shadow one"></div>
+			<div class="shadow two"></div>
+		</div>
+
+		<div class="screen" id="Services">
+			<div class="main">
+				<header class="header_two">
+					<div class="header">
+						<div class="header_item">
+							<h2 class="title">Services page</h2>
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, perferendis adipisci
+								cumque natus expedita nihil!</p>
+							<button class="btn">Read more</button>
+						</div>
+					</div>
+				</header>
+			</div>
+
+			<div class="shadow one"></div>
+			<div class="shadow two"></div>
+		</div>
+
+		<div class="screen" id="Portfolio">
+			<div class="main">
+				<header class="header_three">
+					<div class="header">
+						<div class="header_item">
+							<h2 class="title">Portfolio page</h2>
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, perferendis adipisci
+								cumque natus expedita nihil!</p>
+							<button class="btn">Read more</button>
+						</div>
+					</div>
+				</header>
+			</div>
+
+			<div class="shadow one"></div>
+			<div class="shadow two"></div>
+		</div>
+
+		<div class="screen" id="Testimonials">
+			<div class="main">
+				<header class="header_four">
+					<div class="header">
+						<div class="header_item">
+							<h2 class="title">Testimonials page</h2>
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, perferendis adipisci
+								cumque natus expedita nihil!</p>
+							<button class="btn">Read more</button>
+						</div>
+					</div>
+				</header>
+			</div>
+
+			<div class="shadow one"></div>
+			<div class="shadow two"></div>
+		</div>
+
+		<div class="screen" id="About">
+			<div class="main">
+				<header class="header_five">
+					<div class="header">
+						<div class="header_item">
+							<h2 class="title">About page</h2>
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, perferendis adipisci
+								cumque natus expedita nihil!</p>
+							<button class="btn">Read more</button>
+						</div>
+					</div>
+				</header>
+			</div>
+
+			<div class="shadow one"></div>
+			<div class="shadow two"></div>
+		</div>
+
+		<div class="screen" id="Contact">
+			<div class="main">
+				<header class="header_six">
+					<div class="header">
+						<div class="header_item">
+							<h2 class="title">Contact page</h2>
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, perferendis adipisci
+								cumque natus expedita nihil!</p>
+							<button class="btn">Read more</button>
+						</div>
+					</div>
+				</header>
+			</div>
+
+			<div class="shadow one"></div>
+			<div class="shadow two"></div>
+		</div>
+
+
+
+		<div class="links">
+			<ul>
+				<li>
+					<a class="link" data-link="Home" href="#" style="--i: .1s">Home</a>
+				</li>
+				<li>
+					<a class="link" data-link="Services" href="#" style="--i: .15s">Services</a>
+				</li>
+				<li>
+					<a class="link" data-link="Portfolio" href="#" style="--i: .2s">Portfolio</a>
+				</li>
+				<li>
+					<a class="link" data-link="Testimonials" href="#" style="--i: .25s">Testimonials</a>
+				</li>
+				<li>
+					<a class="link" data-link="About" href="#" style="--i: .3s">About</a>
+				</li>
+				<li>
+					<a class="link" data-link="Contact" href="#" style="--i: .35s">Contact</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+
+	<script src="/3d_website_menu_slaid/3dws.js"></script>
+</body>
+
+</html>
+
+
++++++++++++
+
+scss-препроцессор с помощью watch sass компилируется в css, а подклчюаем мы css так как препроцессоры не видны.
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+*{
+	padding:0;
+	margin:0;
+	box-sizing:border-box;
+	font-family:"Poppins",sans-serif;
+}
+
+//Navbar
+
+.navbar{
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	z-index: 10;
+	height: .3rem;
+	.menu{
+		max-width: 72rem;
+		width: 100%;
+		margin: 0 auto;
+		padding: 0 2rem;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		color: white;
+		.logo{
+			font-size: 1.1rem;
+			font-weight: 600;
+			text-transform: uppercase;
+			letter-spacing: 2px;
+			line-height: 4rem;
+			span {
+				font-weight: 300;
+			}
+		}
+			.burger{
+				height: 4rem;
+				width: 3rem;
+			   cursor: pointer;
+				display: flex;
+				align-items: center;
+				justify-content: flex-end;
+				.bar{
+					width: 1.9rem;
+					height: 1.5px;
+					border-radius: 2px;
+					background-color: #eee;
+					transition: .3s;
+					position: relative;
+					&:after, &:before{
+						content: '';
+						position: absolute;
+						width: inherit;
+						height: inherit;
+						background: #eee;
+						transition: .5s;
+					}
+					&:after{
+						transform: translateY(9px);
+					}
+					&:before {
+						transform: translateY(-9px);
+				   }
+				}
+			}
+		}
+	}
+
+//Page
+.container{
+	min-height:100vh;
+	width: 100%;
+	background-color: #485461;
+	background-image: linear-gradient(135deg,#485461,#28313b 74%);
+	overflow: hidden;
+	transform-style: preserve-3d;
+
+	//Main
+
+	.main{
+		position: relative;
+		width: 100;
+		left: 0;
+		z-index: 5;
+		overflow: hidden;
+		transform-origin: left;
+		transform-style: preserve-3d;
+		transition: .5s;
+		header{
+			min-height: 100vh;
+			width: 100%;
+			position: relative;
+			&.header_one{
+				background: url('../3d_website_menu_slaid/imgs/00ca896b347c3484a923a05c1a108720.jpg') no-repeat top center/cover;
+			}
+			&.header_two {
+	     		background: url('../3d_website_menu_slaid/imgs/1649146011_63-vsegda-pomnim-com-p-krasivie-letnie-peizazhi-prirodi-foto-65.jpg') no-repeat top center/cover;
+			}
+	    	&.header_three {
+				background: url('../3d_website_menu_slaid/imgs/1675060988_3-123.jpg') no-repeat top center/cover;
+			}
+			&.header_four {
+				background: url('../3d_website_menu_slaid/imgs/6a1f578e2fdcdfb54d5a0d55e71bc299.jpeg') no-repeat top center/cover;
+		   }
+         &.header_five {
+	         background: url('../3d_website_menu_slaid/imgs/db6e862725f8e449427d1de5b2be0835.jpeg') no-repeat top center/cover;
+         }
+	      &.header_six {
+				background: url('../3d_website_menu_slaid/imgs/388156-svetik.jpg') no-repeat top center/cover;
+			}
+
+
+			.header{
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				top: 0;
+				left: 0;
+				background-color: rgba(43,51,59,0.5);
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				&_item{
+					max-width: 35rem;
+					text-align: center;
+					color: white;
+					padding: 0 2rem;
+					.title{
+						font-size: 2.7rem;
+					}
+					.btn{
+						margin-top: 1rem;
+						padding: 0.6rem 1.6rem;
+						background-color: #1179e7;
+						border: none;
+						border-radius: 25px;
+						color: white;
+						text-transform: uppercase;
+						cursor: pointer;
+						text-decoration: none;
+					}
+				}
+			}
+		}
+	}
+
+
+	//Shadows
+	.shadow{
+		position: absolute;
+		width: 100%;
+		height: 100vh;
+		top: 0;
+		left: 0;
+		transform-style: preserve-3d;
+		transform-origin: left;
+		transition: .5s;
+		background: white;
+		&.one{
+			z-index: -1;
+			opacity: .15;
+		}
+		&.two{
+			z-index: -2;
+			opacity: .1;
+		}
+	}
+
+	//Links
+	.links{
+		position: absolute;
+		width: 30%;
+		right: 0;
+		top: 0;
+		height: 100vh;
+		z-index: 2;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		a{
+			text-decoration: none;
+			color: #eee;
+			padding: .07rem 0;
+			font-size: 1rem;
+			display: inline-block;
+			font-weight: 300;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+			transition: .3s;
+			opacity: 0;
+			transform: translateY(10px);
+			animation: hide .5s forwards ease;
+		}
+		ul{
+			list-style: none;
+		}
+
+	}
+}
+
+
+
+
+//Animations
+
+.container.active{
+	.bar{
+		transform: rotate(360deg);
+		background-color: transparent;
+		&:before{
+			transform: translateY(0) rotate(45deg);
+		}
+		&:after {
+			transform: translateY(0) rotate(-45deg);
+	   }
+	}
+
+	.main{
+		animation: main-animation 1s ease;
+		cursor: pointer;
+		transform: perspective(1300px) rotateY(20deg) translateZ(310px) scale(0.5);
+		&:hover{
+			transform: perspective(1300px) rotateY(20deg) translateZ(340px) scale(0.5);
+			+ .shadow.one{
+				transform: perspective(1300px) rotateY(20deg) translateZ(230px) scale(0.5);
+			}
+		}
+	}
+
+
+	.shadow.one{
+		animation: shadow-one .6s ease-out;
+		transform: perspective(1300px) rotateY(20deg) translateZ(215px) scale(0.5);
+	}
+	.shadow.two {
+		animation: shadow-two .6s ease-out;
+	   transform: perspective(1300px) rotateY(20deg) translateZ(120px) scale(0.5);
+	}
+
+	.links a{
+		animation: appear .5s forwards ease var(--i);
+	}
+}
+
+
+
+
+//Keyframes
+
+@keyframes  main-animation{
+	from{
+		transform: translate(0);
+	}
+	to{
+		transform: perspective(1300px) rotateY(20deg) translateZ(310px) scale(0.5);
+	}
+}
+
+@keyframes shadow-one{
+	0%{
+		transform: translate(0);
+	}
+	5%{
+			transform: perspective(1300px) rotateY(20deg) translateZ(310px) scale(0.5);
+	}
+	100%{
+			transform: perspective(1300px) rotateY(20deg) translateZ(215px) scale(0.5);
+	}
+}
+
+@keyframes shadow-two {
+	0% {
+		transform: translate(0);
+	}
+
+	20% {
+		transform: perspective(1300px) rotateY(20deg) translateZ(310px) scale(0.5);
+	}
+
+	100% {
+		transform: perspective(1300px) rotateY(20deg) translateZ(120px) scale(0.5);
+	}
+}
+
+@keyframes hide{
+	from{
+		opacity:1;
+		transform:translateY(0px);
+	}
+	to{
+		opacity: 0;
+			transform: translateY(10px);
+	}
+}
+
+@keyframes appear{
+	from{
+		opacity: 0;
+			transform: translateY(10px);
+	}
+	to{
+		opacity: 1;
+			transform: translateY(0px);
+	}
+}
+
+++++++++++++
+
+js
+
+const burger = document.querySelector('.burger');
+const container = document.querySelector('.container');
+const screens = document.querySelectorAll('.screen');
+
+burger.addEventListener('click', () => {
+	container.classList.toggle('active')
+});
+
+function replaceBg(id) {
+	const bg = document.getElementById(id)
+	screens.forEach(screen => {
+		screen.style.display = 'none'
+	})
+	bg.style.display = 'block'
+}
+function changeBg() {
+	const links = document.querySelectorAll('.link');
+
+	links.forEach((link, index) => {
+		link.addEventListener('mouseenter', e => {
+			e.preventDefault();
+			replaceBg(e.target.dataset.link)
+		});
+
+		link.addEventListener('click', e => {
+			e.preventDefault()
+			container.classList.toggle('active')
+		})
+	});
+
+	screens.forEach(screen => {
+		screen.style.display = 'none';
+		screens[0].style.display = 'block'
+	})
+}
+changeBg()
